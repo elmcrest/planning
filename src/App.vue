@@ -1,28 +1,36 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="container">
+    <div class="header"><DaySelector /></div>
+    <div class="content">
+      <p></p>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import DaySelector from "./components/DaySelector.vue";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    DaySelector
   }
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 1em;
+  background-color: salmon;
+}
+
+.content {
+  padding: 1em;
+  background-color: lightgreen;
 }
 </style>
